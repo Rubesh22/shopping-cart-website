@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+   
+   <body class="shop">
+
+        <nav class="navbar">
+        <ul>
+            <li><a href="index.html"> HOME</a></li>
+            <li><a href="shopping.html"> SHOPPING</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+        </nav>
+       
+
+        
+        <div class="dress">
+            <img src="assests/men shirt4.jpg" height="50%" width="30%">
+               <h1 class="dd">Men's Stylish Geometric Pattern Branded Festival  <br>Stretchable Fabric Slim Fit Half Sleeve Cut Away<br> Collar Casual Wear Shirt<hr>  ₹399                   <button onclick="addtocart('men shirt',399,'men shirt4.jpg')">Add cart</button>
+ <br><br><br> 
+                 <br> </h1><br>
+       
+    
+        </div>
+        <hr>
+
+        <div class="dress2">
+            <img src="assests/men shirt2.webp" height="50%" width="30%">
+                           <h1 class="dd">Men's Stylish Geometric Pattern Branded Festival  <br>Stretchable Fabric Slim Fit Half Sleeve Cut Away<br> Collar Casual Wear Shirt<hr>  ₹399   <br><br><br><button  onclick="addtocart('men shirt',399,'men shirt2.webp')" >Add cart</button><br> </h1>
+            
+        </div><hr>
+        <div class="dress3">
+            <img src="assests/men shirt3.avif" height="50%" width="30%">
+                           <h1 class="dd">Men's Stylish Geometric Pattern Branded Festival  <br>Stretchable Fabric Slim Fit Half Sleeve Cut Away<br> Collar Casual Wear Shirt<hr>  ₹399   <br><br><br><button onclick="addtocart('blue shirt',499,'men shirt3.avif')">Add cart</button><br> </h1>
+        
+        </div>
+        
+        <div id="cart">
+
+        </div>
+<script>
+function addtocart(name, price, image)
+{
+    let product = {
+        name: name,
+        price: price,
+        image: image
+    };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart");
+}
+</script>
+
+
+      
+
+
+    
+
+    
+    
+    </body>
+</html>
